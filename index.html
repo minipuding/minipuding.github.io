@@ -1,158 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <!-- Custom CSS for color blocks -->
-    <style>
-        .color-block {
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 5px;
-            background-color: #f0f0f0; /* Adjusted to a uniform, simple color */
-        }
-        .nav-link {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s; /* Added smooth transition for emphasis effect */
-        }
-        .nav-link:hover {
-            background-color: #e0e0e0; /* Added hover effect for emphasis */
-        }
-        .toggle-title {
-            display: none;
-        }
-        /* Added styles for basic information and ID photo */
-        .basic-info {
-            text-align: center;
-        }
-        .id-photo {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
-        .info-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 5px;
-        }
-        .info-icon {
-            margin-right: 5px;
-        }
-    </style>
-    <!-- jQuery for dynamic color blocks and toggle titles -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.nav-link').hover(function() {
-                $(this).toggleClass('color-block');
-            });
-        });
-    </script>
+	<title>My Personal Page</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+		}
+		nav {
+			background-color: #666;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+		}
+		nav a:hover {
+			background-color: #fff;
+			color: #666;
+		}
+		section {
+			margin: 20px;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1>CursorBot's Resume</h1>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Sidebar -->
-            <div class="col-md-3">
-                <nav class="nav flex-column">
-                    <a class="nav-link" href="#basic-information">
-                        <i class="fas fa-info-circle"></i> Basic Information
-                    </a>
-                    <a class="nav-link" href="#education">
-                        <i class="fas fa-graduation-cap"></i> Education
-                    </a>
-                    <a class="nav-link" href="#work-experience">
-                        <i class="fas fa-briefcase"></i> Work Experience
-                    </a>
-                    <a class="nav-link" href="#skills">
-                        <i class="fas fa-cogs"></i> Skills
-                    </a>
-                </nav>
-            </div>
-            <!-- Main Content -->
-            <div class="col-md-9">
-                <!-- Basic Information -->
-                <section id="basic-information" class="color-block">
-                    <div class="basic-info">
-                        <h2>Basic Information</h2>
-                        <div class="info-item">
-                            <i class="fas fa-user info-icon"></i>
-                            <span>Name: CursorBot</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope info-icon"></i>
-                            <span>Email: cursorbot@example.com</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone info-icon"></i>
-                            <span>Phone: +1 (123) 456-7890</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt info-icon"></i>
-                            <span>Address: 123 Main St, City, State</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-pin info-icon"></i>
-                            <span>Postcode: 12345</span>
-                        </div>
-                    </div>
-                    <img src="https://via.placeholder.com/100" alt="ID Photo" class="id-photo">
-                </section>
-
-                <!-- Education Information -->
-                <section id="education" class="color-block">
-                    <h2>Education</h2>
-                    <ul>
-                        <li>PhD in Artificial Intelligence, University of AI, 2020-2024</li>
-                        <li>Master of Science in Computer Science, University of XYZ, 2018-2020</li>
-                        <li>Bachelor of Science in Computer Science, University of XYZ, 2014-2018</li>
-                    </ul>
-                </section>
-
-                <!-- Work Experience -->
-                <section id="work-experience" class="color-block">
-                    <h2>Work Experience</h2>
-                    <ul>
-                        <li>Lead AI Developer, Company A, 2024-Present</li>
-                        <li>AI Researcher, Company B, 2020-2024</li>
-                        <li>Software Engineer, Company C, 2018-2020</li>
-                    </ul>
-                </section>
-
-                <!-- Skills -->
-                <section id="skills" class="color-block">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>Programming Languages: Python, Java, JavaScript, C++, C#</li>
-                        <li>Web Development: HTML, CSS, Bootstrap, Node.js</li>
-                        <li>Frameworks: Django, React, Angular, TensorFlow, PyTorch</li>
-                        <li>Machine Learning: Supervised Learning, Unsupervised Learning, Reinforcement Learning</li>
-                        <li>Cloud Computing: AWS, Google Cloud, Azure</li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+	<header>
+		<h1>My Personal Page</h1>
+	</header>
+	<nav>
+		<a href="#about">About</a>
+		<a href="#skills">Skills</a>
+		<a href="#projects">Projects</a>
+		<a href="#contact">Contact</a>
+	</nav>
+	<section id="about">
+		<h2>About Me</h2>
+		<p>Hi, my name is [Your Name] and I am a [Your Profession]. I have [Number of Years] years of experience in [Your Field]. I am passionate about [Your Passion] and I love to [Your Hobbies].</p>
+	</section>
+	<section id="skills">
+		<h2>Skills</h2>
+		<ul>
+			<li>[Skill 1]</li>
+			<li>[Skill 2]</li>
+			<li>[Skill 3]</li>
+			<li>[Skill 4]</li>
+			<li>[Skill 5]</li>
+		</ul>
+	<section id="projects">
+		<h2>Projects</h2>
+		<p>Here are some of my recent projects:</p>
+		<ul>
+			<li>[Project 1]</li>
+			<li>[Project 2]</li>
+			<li>[Project 3]</li>
+		</ul>
+	</section>
+	<section id="contact">
+		<h2>Contact Me</h2>
+		<p>You can reach me at:</p>
+		<ul>
+			<li>Email: [Your Email]</li>
+			<li>Phone: [Your Phone Number]</li>
+			<li>Social Media: [Your Social Media Handles]</li>
+		</ul>
+	</section>
 </body>
 </html>
